@@ -78,8 +78,12 @@ $ cd instagram-picture
 # Install dependencies
 $ composer install
 
+# Before Running project
+- Change Password and Username in line ( 12 & 13 ) in run.php
+
 # Run the project example
 $ php run.php
+
 
 # Result 
 
