@@ -129,7 +129,7 @@ class Instagram
                 $RequestCookies['Data']['Cookie']
             );
 
-            if (json_decode($RequestLogin['Body'], true)['authenticated'] === true || json_decode($RequestLogin['Body'], true)['status'] == 'ok') {
+            if (json_decode($RequestLogin['Body'], true)['authenticated'] ?? null === true || json_decode($RequestLogin['Body'], true)['status'] ?? null == 'ok') {
 
                 $this->login_data = [
                     'Status' => true,

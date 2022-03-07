@@ -83,7 +83,7 @@ class Helpers
                 'Status' => false,
                 'Msg' => $curl->getErrorMessage(),
                 'HttpCode' => $curl->getHttpStatusCode(),
-                'RawResponse' => $curl->getRawResponse(),
+                'Body' => $curl->getRawResponse(),
                 'RequestHeaders' => $curl->getRequestHeaders(),
 
             ];

@@ -14,6 +14,7 @@ $password = '';
 try {
 
     $Login = $instagram->Login($username, $password);
+
     if ($Login['Status'] === true) {
 
         /* This is uploading a single photo to Instagram. */
@@ -37,7 +38,6 @@ try {
         print_r($Login);
 
     }
-
 } catch (Exception $e) {
         print_r($e->getMessage());
 }
