@@ -21,7 +21,7 @@ Primary Author: sandroputraa
 
 namespace sandroputraa\InstagramPicture;
 
-class Instagram
+class Instagram 
 {
     public $UserAgent;
     public $login_data;
@@ -102,7 +102,7 @@ class Instagram
 
         if (empty($username && $password)) {
 
-            throw new Exception("Username and Password Empty !");
+            throw new \Exception("Username and Password Empty !");
         }
 
         $RequestCookies = $this->GetCookie();
@@ -170,7 +170,7 @@ class Instagram
     {
 
         if (!file_exists($picture_file)) {
-            throw new Exception("Photo File not found !");
+            throw new \Exception("Photo File not found !");
         }
 
         $file_picture = curl_file_create($picture_file);
@@ -220,7 +220,7 @@ class Instagram
     {
 
         if (!file_exists($picture_file)) {
-            throw new Exception("Photo File not found !");
+            throw new \Exception("Photo File not found !");
         }
 
         $fbUploader = $this->_fb_uploader($picture_file);
@@ -293,7 +293,7 @@ class Instagram
     {
 
         if (!file_exists($picture_file)) {
-            throw new Exception("Photo File not found !");
+            throw new \Exception("Photo File not found !");
         }
 
         $getImage = file_get_contents($picture_file);

@@ -11,28 +11,33 @@ $instagram = new Instagram();
 /* This is logging into your Instagram account. */
 $username = '';
 $password = '';
+try {
 
-$Login = $instagram->Login($username, $password);
-if ($Login['Status'] === true) {
+    $Login = $instagram->Login($username, $password);
+    if ($Login['Status'] === true) {
 
-    /* This is uploading a single photo to Instagram. */
-    print_r(
+        /* This is uploading a single photo to Instagram. */
+        print_r(
 
-        $instagram->UploadSingleFeeds(__DIR__ . '/mbaks.jpg', 'Caption !!')
+            $instagram->UploadSingleFeeds(__DIR__ . '/mbaks.jpg', 'Caption !!')
 
-    );
+        );
 
-    echo "\n";
+        echo "\n";
 
-    /* This is changing your profile picture. */
-    print_r(
+        /* This is changing your profile picture. */
+        print_r(
 
-        $instagram->ChangeProfile(__DIR__ . '/mbaks.jpg')
+            $instagram->ChangeProfile(__DIR__ . '/mbaks.jpg')
 
-    );
+        );
 
-} else {
+    } else {
 
-    print_r($Login);
+        print_r($Login);
 
+    }
+
+} catch (Exception $e) {
+        print_r($e->getMessage());
 }
