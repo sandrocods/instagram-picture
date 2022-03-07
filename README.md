@@ -46,7 +46,7 @@
 
 ## :dart: About ##
 
-Simple Library to Uploads single feeds & Change Profile Picture
+Simple Library to Uploads single feeds & Change Profile Picture based on Web API 
 
 ## :sparkles: Features ##
 
